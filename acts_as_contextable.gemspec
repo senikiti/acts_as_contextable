@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = ActsAsContextable::VERSION
   spec.authors       = ["Sergiy Nikitin"]
   spec.email         = ["sn@inno-w.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{This gem provides basic linking functionality of active record objects. In cases when hard-coded references are not needed, you may refer to other objects by adding them to context}
+  spec.summary       = %q{Context linking is a flexible mechanizm for dynamic referencing between active record objects.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
