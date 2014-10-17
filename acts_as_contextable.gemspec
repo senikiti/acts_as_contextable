@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sn@inno-w.com"]
   spec.description   = %q{This gem provides basic linking functionality of active record objects. In cases when hard-coded references are not needed, you may refer to other objects by adding them to context}
   spec.summary       = %q{Context linking is a flexible mechanizm for dynamic referencing between active record objects.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/senikiti/acts_as_contextable"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

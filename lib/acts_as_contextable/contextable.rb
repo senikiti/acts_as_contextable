@@ -44,7 +44,11 @@ module ActsAsContextable
       context_ref.save
     end
     
-    def remove_from_context args = {}
+    def remove_from_context context, options = {}
+      self.remove_from_ctx :context => context
+    end
+    
+    def remove_from_ctx args = {}
       return false if args[:context].nil?
       _context_refs_ = find_contexts_for(:context_id => args[:context].id, :context_type => args[:context].class.base_class.name)
 
@@ -53,7 +57,15 @@ module ActsAsContextable
       return true
     end
     
-    def has_contexts_of_a_type ctxclass
+    def has_context?
+      find_contexts_for().count > 0
+    end
+    
+    def contexts
+      find_contexts_for().map(&:context)
+    end
+    
+    def has_contexts_of_a_type? ctxclass
       find_contexts_for(:context_type => ctxclass.base_class.name).count > 0
     end
     
