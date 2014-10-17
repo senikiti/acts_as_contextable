@@ -25,7 +25,7 @@ Or install it yourself as:
 Acts As Contextable uses a votes table to store all voting information.  
 To generate and run the migration just use.
 
-    rails generate acts_as_votable:migration
+    rails generate acts_as_contextable:migration
     rake db:migrate
 
 ## Usage
